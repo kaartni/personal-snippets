@@ -1,6 +1,8 @@
 # Personal snippets
 
-## Show git branch in terminal
+## General
+
+### Show git branch in terminal
 
 in `.bashrc` Replace this
 
@@ -27,10 +29,21 @@ fi
 unset color_prompt force_color_prompt
 ```
 
-## Create a new database and a user for that database
+### Create a new database and a user for that database
 
 ```sql
 CREATE DATABASE {dbname} CHARACTER SET utf8;
 
 GRANT ALL ON {dbname}.* TO {dbname}@localhost IDENTIFIED BY '{password}';
+```
+
+## Docker
+
+### Run a program inside a running container
+
+```bash
+docker container exec {container} {program}
+
+eg.
+docker container exec mysql bash
 ```
